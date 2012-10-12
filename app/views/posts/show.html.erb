@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @post.text %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @city %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @state %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @zipcode %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @latitude %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @longitude %>
+</p>
+<%= @picture.exif.to_hash[:gps_longitude_ref] %>
+<p>
+  <table class="table table-striped">
+      <% @picture.exif.to_hash.each do |key, value| %>
+        <tr><td><%= key %></td><td><%= value %></td></tr>
+      <% end %>
+  </table>
+
+
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

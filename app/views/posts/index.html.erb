@@ -1,0 +1,44 @@
+<h1>Listing posts</h1>
+
+<table class="table table-hover">
+
+<%= link_to 'New Post', new_post_path %>
+<% @posts.each do |post| %>
+  <tr>
+    <tr>
+      <td class="lead">Title:</td>
+      <td class="lead"><%= post.title %></td>
+    </tr>
+      <tr>
+        <td class="lead">Description:</td>
+        <td class="lead"><%= post.text %></td>
+      </tr>
+      <tr>
+        <td class="lead">By:</td>
+        <td class="lead"><%= post.user.email if post.user %></td>
+      </tr>
+    <tr>
+      <td></td>
+      <td><%= image_tag post.image %></td>
+    </tr>
+    <tr class="error">
+        <td></td>
+        <td><div class="floatright">
+          <%= link_to "New Comment", new_post_comment_path(post) %>
+          <%= link_to raw('<i class="icon-zoom-in icon-white "></i>'), post, :class => 'btn-small btn-success' %>
+          <%= link_to raw('<i class="icon-edit icon-white"></i>'), edit_post_path(post), :class => 'btn-small btn-success' %>
+          <%= link_to raw('<i class="icon-trash icon-white"></i>'), post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn-small btn-danger' %>
+        </div>
+        </td>
+      </tr>
+      <% post.comments.each do |comment| %>
+          <tr><td><%= comment.user.email if comment.user %></td><td><%= comment.text %></td></tr>
+
+      <% end %>
+      <tr><br /></tr>
+  <% end %>
+</table>
+
+
+
+
