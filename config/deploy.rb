@@ -1,4 +1,4 @@
-require "rvm/capistrano"
+
 require 'bundler/capistrano'
 
 set :application, "blogo"
@@ -11,7 +11,7 @@ set :user, "deployer"
 
 server "spaced.homeip.net", :app, :web, :db, :primary => true
 set :deploy_to, "/home/deployer/blogo"
-
+#set :deploy_via, :copy
 set :use_sudo, "false"
 
 after "deploy:update_code","deploy:config_symlink"
