@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 gem 'devise'
 gem 'capistrano'
 gem 'capistrano-ext'
+gem "rvm-capistrano"
 
 gem 'pg'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git',

@@ -75,6 +75,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rake (v0.9.2.2, RVM: ruby-1.9.3-p194) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12, RVM: ruby-1.9.3-p194) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v0.9.9, RVM: ruby-1.9.3-p194) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rvm-capistrano (v1.2.7, RVM: ruby-1.9.3-p194) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.1, RVM: ruby-1.9.3-p194) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.5, RVM: ruby-1.9.3-p194) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v2.25.0, RVM: ruby-1.9.3-p194) [gem]" level="application" />
