@@ -20,4 +20,5 @@ namespace :deploy do
   task :config_symlink do
     run "cp /home/deployer/deploy/database.yml #{release_path}/config/database.yml"
   end
+
 end
